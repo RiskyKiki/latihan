@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Selamat Pagi, Siang, dan Malam</title>
+        <script>
+            function getPesanSelamat() {
+                var pesan = "";
+                var waktu = new Date().getHours();
+                if (waktu >= 0 && waktu < 12) {
+                    pesan = "Selamat Pagi";
+                } else if (waktu >= 12 && waktu < 18) {
+                    pesan = "Selamat Siang";
+                } else {
+                    pesan = "Selamat Malam";
+                }return pesan;
+            }function tampilkanPesan() {
+                var pesan = getPesanSelamat();
+                alert(pesan + ", " + " !!!!");
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <h1>Selamat Pagi, Siang, dan Malam</h1>
+        <button onclick="tampilkanPesan()">Tampilkan Pesan</button>
+        <br></center>
+    </body>
+</html>

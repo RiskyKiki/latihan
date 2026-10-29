@@ -1,0 +1,57 @@
+<html>
+    <head><title>Latihan Modul 5.1</title>
+        <style>
+            table, td, th {
+              border: 1px solid;}
+            table {
+              border-collapse: collapse;
+              text-align: center;}
+            </style>
+    </head>
+    <body>
+        <script language="JavaScript">
+            function proses(){
+                var input=parseFloat(document.ffrom.inputan.value);
+                var angka=1;
+                var faktor=1;
+                var deret=0.0;
+                while(angka<=input){
+                    faktor=faktor*angka;
+                    deret=deret+angka;
+                    angka=angka+1;}
+                document.ffrom.ofaktor.value=eval(faktor);
+                document.ffrom.oderet.value=eval(deret);}
+        </script>
+    <form name="ffrom">
+        <table align="center">
+            <tr>
+                <td colspan=2>
+                <center>
+                    <h3>PERHITUNGAN FAKTORIAL 
+                    <h3>dan DERET</h3>
+                </center>
+            </td>
+            <td></td>
+            </tr>
+            <tr>
+                <td>N</td>
+                <td><input type="text" name="inputan"></td>
+            </tr>
+            <tr>
+                <td colspan=0><b>Hasil</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Faktorial</td>
+                <td><input type="text" name="ofaktor"></td>
+                <td><input type="button" value="Sumbit" onclick="proses()">
+                    <input type="reset" value="Reset"></td>
+            </tr>
+            <tr>
+                <td>Jumlah</td>
+                <td><input type="text" name="oderet"></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

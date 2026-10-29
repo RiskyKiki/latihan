@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DATA MAHASISWA</title>
+    <style>
+        H1,H2,p{text-align: center;}
+        hr{border-top: 3px solid black;}
+    </style>
+</head>
+<body style="background-color: rgb(0, 204, 255);">
+<script languange ="JavaScript">
+    function tekan() 
+    {
+    var nimstr = document.fform.nim.value;
+    document.fform.onim.value = nimstr;
+    var alamatstr = document.fform.alamat.value;
+    document.fform.oalamat.value = alamatstr;
+    var ketstr = document.fform.Ket.value;
+    document.fform.oket.value = ketstr;
+    var jurusanstr = document.fform.Jurusan.value;
+    document.fform.ojurusan.value = jurusanstr;
+    var agamastr = document.fform.agama.value;
+    document.fform.oagama.value = agamastr;
+    var kelaminstr = document.fform.kelamin.value;
+    document.fform.okelamin.value = kelaminstr;
+
+    var statuskawinElem = document.querySelector('input[name="kawin"]:checked');
+    var statuskawinstr = statuskawinElem ? statuskawinElem.value : "Belum kawin";
+    document.fform.ostatus.value = statuskawinstr;
+    }
+</script>
+<form name ="fform">
+<H1> Data Mahasiswa</H1>
+<H2> Universitas Komputer Indonesia</H2><hr>
+<PRE>
+NIM               :<input type="number" size="11" name="nim">
+Nama Mahasiswa    :<input type="text" size="25" name="alamat">
+Jenis Kelamin     :<select name="kelamin" Size="1">
+    <option> -Pilih satu- </option>
+    <option value ="Perempuan"> Perempuan </option>
+    <option value ="Laki-laki"> Laki-laki </option></select>
+Agama             :<select name="agama" Size="1">
+    <option> -Pilih satu- </option>
+    <option value ="Islam"> Islam </option>
+    <option value ="Kristen"> Kristen </option>
+    <option value ="Budha"> Budha </option>
+    <option value ="Hindu"> Hindu </option>
+    <option value ="Konghuchu"> Konghuchu </option></select>
+STATUS            :<input type="radio" value="kawin" name="kawin">kawin
+Jurusan Di UNIKOM :<select name="Jurusan" Size="1">
+    <option> -Pilih satu- </option>z
+    <option value ="Teknik Informatika"> Teknik Informatika </option>
+    <option value ="Manajemen Informatika"> Manajemen Informatika </option>
+    <option value ="Teknik Komputer"> Teknik Komputer</option>
+    <option value ="Teknik Industri"> Teknik Industri</option>
+    <option value ="Teknik Elektro"> Teknik Elektro</option>
+    <option value ="Teknik Sipil"> Teknik Sipil </option>
+    <option value ="Teknik Arsitektur"> Teknik Arsitektur</option>
+    <option value ="Teknik Perencanaan Wil. Kota ">Perencanaan Wil. Kota </option></select>
+Komentar          :<textarea name="Ket" rows="3" cols="30"></textarea>
+</PRE>
+<input type="button" value="kirim" onclick="tekan()">
+<input type="reset" value="ulang">
+<PRE>
+<h3><U>Data Mahasiswa Universitas Komputer Indonesia</U></h3>
+NIM               :<input type="number" size="11" name="onim">
+Nama              :<input type="text" size="25" name="oalamat">
+Jenis kelamin     :<input type="text" name="okelamin" size="8">
+agama             :<input type="text" name="oagama" size="8">
+Status            :<input type="text" name="ostatus" size="10">
+Jurusan           :<input type="text" name="ojurusan" size="25">
+Komentar          :<textarea name="oket" rows="3" cols="30"></textarea>
+</PRE>
+</form>
+</body>
+</html>

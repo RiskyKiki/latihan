@@ -1,0 +1,14 @@
+/* style.css */
+
+/* Mengatur tampilan gambar di dalam main */
+main img {
+    display: block; /* Membuat gambar menjadi blok sehingga dapat diatur posisinya */
+    margin: 0 auto; /* Meletakkan gambar di tengah-tengah horizontal */
+  }
+  
+  /* Mengatur tampilan paragraf di dalam main */
+  main p {
+    line-height: 1.6; /* Jarak antara baris dalam paragraf */
+    margin-bottom: 5px; /* Jarak antara paragraf */
+  }
+  

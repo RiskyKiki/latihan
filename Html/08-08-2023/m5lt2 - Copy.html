@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Latihan 5.2</title>
+</head>
+<body>
+    <script languange ="JavaScript">
+        function hitungSaldo() {
+            var saldoAwal = parseInt(document.fform.saldo.value);
+            var bunga = parseInt(document.fform.bunga.value);
+            var waktu = parseInt(document.fform.waktu.value);
+            var saldo = saldoAwal; hasil = "";
+            for (var i = 1; i <= waktu; i++) {
+                saldo += saldo * (bunga / 100);
+                hasil += "Saldo Bulan " + i + " = Rp. " + saldo + "\n";
+            }document.getElementById("hasil").innerHTML = hasil;}
+    </script>
+    <h1 style="text-align: center;">Perhitungan Bunga</h1>
+    <form name="fform">
+        <pre>
+Data input :
+Saldo    Rp.<input type="number" style="width: 150;" name="saldo"> ,00
+Bunga       <input type="number" style="width: 50;" name="bunga"> %
+Waktu       <input type="number" style="width: 50;" name="waktu"> Bulan<br>
+        <input type="button" value="Submit" onclick="hitungSaldo()"><input type="reset" value="Reset">
+        </pre>
+    </form>
+    <p style="text-align: left">Hasil perhitungan:</p>
+    <textarea rows="20" cols="40" style="text-align: left" id="hasil"></textarea>
+</body>
+</html>

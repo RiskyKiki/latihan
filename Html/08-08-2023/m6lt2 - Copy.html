@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Kalkulator Akar-Akar Persamaan Kuadrat</title>
+        <script>
+            function hitungAkar() {
+                var a = parseFloat(document.getElementById("inputA").value);
+                var b = parseFloat(document.getElementById("inputB").value);
+                var c = parseFloat(document.getElementById("inputC").value);
+                var discriminant = b * b - 4 * a * c;
+                if(discriminant > 0) {
+                    var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                    document.getElementById("hasilAkar").innerHTML = "Akar x1 = " + x1.toFixed(2) + "<br>Akar x2 = " + x2.toFixed(2);
+                }else if (discriminant === 0) {
+                    var x = -b / (2 * a);
+                    document.getElementById("hasilAkar").innerHTML = "Akar ganda x = " + x.toFixed(2);
+                }else {
+                    document.getElementById("hasilAkar").innerHTML = "Tidak memiliki akar real";}
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Kalkulator Akar-Akar Persamaan Kuadrat</h1>
+        Masukkan nilai a:<input type="number" id="inputA"><br>
+        Masukkan nilai b:<input type="number" id="inputB"><br>
+        Masukkan nilai c:<input type="number" id="inputC"><br>
+        <button onclick="hitungAkar()">Hitung Akar</button><br>
+        <p id="hasilAkar"></p>
+    </body>
+</html>

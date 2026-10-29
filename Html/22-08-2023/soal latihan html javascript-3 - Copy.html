@@ -1,0 +1,44 @@
+`<html>
+    <head>
+        <title>PROGRAM PENGGAJIAN PT.SATU MALAM 2 CITRA</title>
+        <style>
+            #my-div { 
+                position: absolute;
+                top: 100px;
+                left: 50px;}
+        </style>
+    </head>
+    <body>
+        <script lang="JavaScript">
+            function Proses(){
+                var jamKerja = parseFloat(document.fform.jamKerja.value);
+                var upahPerJam = parseFloat(document.fform.upahPerJam.value);
+                var jumlahAnak = parseInt(document.fform.anak.value);
+                
+                var gaji = jamKerja * upahPerJam;
+                var tunjanganAnak = 0.1 * gaji * jumlahAnak;
+                var totalGaji = gaji + tunjanganAnak;
+                
+                document.fform.gaji.value = gaji;
+                document.fform.tunjanganAnak.value = tunjanganAnak;
+                document.fform.totalGaji.value = totalGaji;
+            }
+        </script>
+        <form name="fform">
+            <div id="my-div">
+                <h2 style="text-align: center;">PROGRAM PENGGAJIAN<br>PT.SATU MALAM 2 CINTA<hr style="border: 1px solid ;"></h2>
+                <pre>
+            Nama Pegawai  : <input type="text" name="nama">
+            Jam Kerja     : <input type="number" style="width: 100" name="jamKerja">
+            Upah per Jam  : <input type="number" style="width: 100" name="upahPerJam">
+            Anak          : <input type="number" style="width: 100" name="anak">
+            Gaji          : <input type="number" style="width: 100" name="gaji">
+            Tunj.anak 10% : <input type="number" style="width: 100" name="tunjanganAnak">
+            Total Gaji    : <input type="number" style="width: 100" name="totalGaji">
+            <hr style="border: 1px solid ;">    
+                <input type="button" value="Proses" onclick="Proses()"><input type="reset" value="Reset">
+                </pre>
+            </div>
+        </form>
+    </body>
+</html>

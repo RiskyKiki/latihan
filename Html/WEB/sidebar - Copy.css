@@ -1,0 +1,30 @@
+/* style.css */
+
+/* Mengatur tampilan sidebar */
+.sidebar {
+    background-color: #f0f0f0;
+    width: 200px;
+    padding: 10px;
+    float: left; /* Mengatur posisi sidebar di sebelah kiri */
+  }
+  
+  /* Mengatur tampilan daftar di dalam sidebar */
+  .sidebar ul {
+    list-style-type: none; /* Menghapus bullet pada daftar */
+    padding: 0;
+  }
+  
+  /* Mengatur tampilan tautan di dalam daftar sidebar */
+  .sidebar li a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Membuat tautan menjadi blok agar dapat di-klik di seluruh area */
+    padding: 5px 10px;
+  }
+  
+  /* Mengatur tampilan tautan aktif (misalnya saat halaman terbuka) */
+  .sidebar li a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  

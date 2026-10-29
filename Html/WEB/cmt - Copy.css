@@ -1,0 +1,8 @@
+<style>
+  .img {
+    width: 200px;
+    height: auto; /* Tinggi akan disesuaikan agar gambar tidak terdistorsi */
+  }
+</style>
+
+<img src=".cmt.jpg" alt="Ini adalah deskripsi gambar" class="">

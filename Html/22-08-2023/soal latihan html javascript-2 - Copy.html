@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>HTML JavaScript</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            function Proses(){
+                var namaBarang = document.fform.nama.value;
+                var harga = parseFloat(document.fform.harga.value);
+                var jumlah = parseInt(document.fform.jumlah.value);
+                var total = harga * jumlah;
+                var diskon = 0;
+        
+                if (jumlah <= 12)                     {diskon = 10;} 
+                else if (jumlah > 12 && jumlah <= 20) {diskon = 15;} 
+                else if (jumlah > 20)                 {diskon = 20;}
+        
+                var diskonAmount = (diskon / 100) * total;
+                var bayar = total - diskonAmount;
+        
+                document.fform.total.value = total;
+                document.fform.diskon.value = diskon;
+                document.fform.bayar.value = bayar;
+            }
+        </script>        
+        <form name="fform">
+            <h1 style="text-align: center;">PROGRAM PENJUALAN BARANG</h1><hr style="border: 1px solid ;">
+            <pre>
+                            Nama Barang :   <input type="text" name="nama">
+                            Harga       :Rp.<input type="number" style="width: 100" name="harga">
+                            Jumlah      :   <input type="number" style="width: 100" name="jumlah"> <hr style="border: 3px solid ;">
+                            Total       :Rp.<input type="number" style="width: 100" name="total">
+                            Diskon      :   <input type="number" style="width: 50" name="diskon">%
+                            Bayar       :Rp.<input type="number" style="width: 100" name="bayar"> <hr style="border: 1px solid ;">
+                                    <input type="button" value="Proses" onclick="Proses()"><input type="reset" value="Reset">
+            </pre>
+        </form>
+    </body>
+</html>

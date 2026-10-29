@@ -1,0 +1,54 @@
+.form{
+	position: relative;
+	left: 200px;
+}
+.form input{
+	position: relative;
+	left: 18px;
+	 width: 10%;
+	clear: both;
+}
+
+.ttl{
+	position: relative;
+	left: 200px;
+}
+
+.ttl input{
+	position: relative;
+	left: 1px;
+	width: 4%;
+	clear: both;
+}
+
+.tempat{
+	position: relative;
+	left: 195px;
+}
+
+.br{
+            display: block;
+            margin-bottom: 0.5em;
+        }
+p{
+font-family:Arial, Helvetica, sans-serif;}
+
+.email{
+	position: relative;
+	left: 160px;
+}
+.email input{
+	position: relative;
+	left:180px;
+}
+	.sandi{
+	position: relative;
+	left: 250px;
+}
+.sandi input{
+	position: relative;
+	left: 10px;
+	 width: 10%;
+	clear: both;
+}
+	
